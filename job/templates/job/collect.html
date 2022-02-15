@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Job Gathering {{salutation}}</h2>
+<!--
+created = models.DateTimeField('date created')
+    JobTitre = models.CharField(max_length=1000)
+    Secteur = models.CharField(max_length=1000)
+    nbCandidat = models.CharField(max_length=1000)
+    DureeAttente = models.CharField(max_length=1000)
+    StatusOffre = models.CharField(max_length=1000)
+    Entreprise = models.CharField(max_length=1000)
+    Lieu= models.CharField(max_length=1000)
+    Taille= models.CharField(max_length=100)
+    Mission= models.TextField('type mission')
+    TypeRecrutement= models.CharField(max_length=1000)
+    CompTechnique= models.TextField('competence tech')
+    CompHumaine= models.TextField('competence hum')
+    Profile= models.TextField('profile type')
+-->
+<form method="POST">
+
+    {% csrf_token %}
+
+  <label for="lan">Language:</label><br>
+  <input type="text" id="lan" name="lang" autocomplete="off"><br>
+
+  <label for="pla">Plateforme:</label><br>
+  <input type="text" id="pla" name="Plateforme" autocomplete="off"><br>
+
+  <label for="jTitre">Job Titre:</label><br>
+  <input type="text" id="jTitre" name="JobTitre" autocomplete="off"><br>
+
+  <label for="sect">Secteur:</label><br>
+  <input type="text" id="sect" name="Secteur"  autocomplete="off"><br><br>
+
+  <label for="nbCand">Nombre Candidat:</label><br>
+  <input type="text" id="nbCand" name="nbCandidat" autocomplete="off"><br>
+
+  <label for="dAttente">Durée Attente:</label><br>
+  <input type="text" id="dAttente" name="DureeAttente" autocomplete="off"><br>
+
+  <label for="stat">Status offre:</label><br>
+  <input type="text" id="stat" name="StatusOffre" autocomplete="off"><br>
+
+  <label for="entr">Entreprise:</label><br>
+  <input type="text" id="entr" name="Entreprise" autocomplete="off"><br>
+
+  <label for="lie">Lieu:</label><br>
+  <input type="text" id="lie" name="Lieu" autocomplete="off"><br>
+
+  <label for="tai">Taille:</label><br>
+  <input type="text" id="tai" name="Taille" autocomplete="off"><br>
+
+  <label for="miss">Mission:</label><br>
+  <!-- <input type="text" id="miss" name="Mission" autocomplete="off" size="40"><br> -->
+  <textarea id="miss" name="Mission" rows="5" cols="33"> </textarea> <br>
+
+  <label for="pro">Propos:</label><br>
+  <!-- <input type="text" id="miss" name="Mission" autocomplete="off" size="40"><br> -->
+  <textarea id="pro" name="Propos" rows="5" cols="33"> </textarea> <br>
+
+  <label for="tRec">Type de Recrutement:</label><br>
+  <input type="text" id="tRec" name="TypeRecrutement" autocomplete="off"><br>
+
+  <label for="cTech">Compétence technique:</label><br>
+  <!-- <input type="text" id="cTech" name="CompTechnique" autocomplete="off" ><br> -->
+  <textarea id="cTech" name="CompTechnique" rows="5" cols="33"> </textarea> <br>
+
+  <label for="cHum">Compétence humaine:</label><br>
+  <!-- <input type="text" id="cHum" name="CompHumaine" autocomplete="off"><br> -->
+  <textarea id="cHum" name="CompHumaine" rows="5" cols="33"> </textarea> <br>
+
+  <label for="prof">Profile:</label><br>
+  <!-- <input type="text" id="prof" name="Profile" autocomplete="off"><br> -->
+  <textarea id="prof" name="Profile" rows="5" cols="33"> </textarea> <br>
+
+  <label for="exp">Experience:</label><br>
+  <input type="text" id="exp" name="Experience" autocomplete="off"><br>
+
+  <label for="dip">Diplome:</label><br>
+  <input type="text" id="dip" name="Diplome" autocomplete="off"><br>
+
+
+  <input type="submit" value="Insérer Job">
+</form> 
+
+
+</body>
+</html>
